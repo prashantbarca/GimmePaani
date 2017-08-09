@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+require 'GimmePaani'
+
+GimmePaani::GimmePaani.notify

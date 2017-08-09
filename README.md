@@ -1,28 +1,40 @@
 # GimmePaani
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/GimmePaani`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This is a gem to remind you to drink water at specific intervals of time.
 
 ## Installation
 
-Add this line to your application's Gemfile:
+```shell
+git clone git@github.com:prashantbarca/GimmePaani.git
+cd GimmePaani
+bundle install
+gem build GimmePaani.gemspec
+gem install GimmePaani-0.1.0.gem
+```
+To test if it works, just run the following on your command line -
 
-```ruby
-gem 'GimmePaani'
+```shell
+gimmepaani
 ```
 
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install GimmePaani
+You will get a notification if it works correctly.
 
 ## Usage
 
-TODO: Write usage instructions here
+To set the reminders, you will have to find the executable, and update its location.
+
+```shell
+which gimmepaani
+```
+
+Copy this location and replace it on line 23 in the file config/schedule.rb.
+
+```shell
+whenever --update-crontab
+```
+
+And, you are set! Stay hydrated!
+
 
 ## Development
 

@@ -8,7 +8,5 @@ gem 'whenever'
 case RUBY_PLATFORM
 when /darwin/
 	gem 'adhd_osx', '~> 0.0.3'
-when /linux/
-	gem 'rb-inotify'
 end
 gemspec
